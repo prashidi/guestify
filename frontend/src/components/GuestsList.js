@@ -19,11 +19,11 @@ class GuestList extends React.Component {
     }
 
     return (
-      <div>
-        <ol>
+      <div className="list-guest">
+        <ul className="guest-list">
           {guests.map((guest) => (
-            <li key={guest.id}>
-              <div>
+            <li key={guest.id} className="guest-list-item ">
+              <div className="guest-details">
                 <p>{guest.name}</p>
                 <p>{guest.email}</p>
               </div>
@@ -32,7 +32,7 @@ class GuestList extends React.Component {
               </div>
             </li>
           ))}
-        </ol>
+        </ul>
 
       </div>
     );
