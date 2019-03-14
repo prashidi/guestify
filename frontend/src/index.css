@@ -22,16 +22,6 @@ body, .app {
   box-sizing: border-box;
 }
 
-body {
-  position: absolute;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  padding-top: 80px;
-  height: 1900px;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -150,13 +140,13 @@ header {
 /* ListGuest */
 
 .list-guest{
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .guest-list {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   list-style-type: none;
 }
 
@@ -183,4 +173,42 @@ header {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.guest-remove {
+  padding-left: 20px;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-image: url('./icons/cancel.svg');
+  background-size: 100% 100%;
+  border: 0;
+  color: black;
+  font-size: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+}
+
+.guest-table {
+  margin-left: 5%;
+  flex: 1;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

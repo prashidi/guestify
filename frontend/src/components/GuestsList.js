@@ -21,15 +21,24 @@ class GuestList extends React.Component {
     return (
       <div className="list-guest">
         <ul className="guest-list">
+          <div className="row">
+            <div className="column guest-details"><h4>Guest details</h4></div>
+            <div className="column guest-details"><h4>Table number</h4></div>
+          </div>
+
           {guests.map((guest) => (
             <li key={guest.id} className="guest-list-item ">
               <div className="guest-details">
                 <p>{guest.name}</p>
                 <p>{guest.email}</p>
               </div>
-              <div>
+              <div className="guest-table">
                 <p>{guest.table}</p>
               </div>
+              <button className='guest-remove'>
+                Remove
+              </button>
+
             </li>
           ))}
         </ul>
