@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Guest
+from .serializers import GuestSerializer
+
+class GuestViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing guest instances.
+    """
+    serializer_class = GuestSerializer
+    queryset = Guest.objects.all()
